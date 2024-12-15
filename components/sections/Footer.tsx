@@ -7,7 +7,7 @@ const Footer = () => {
         <div className=" flex-col md:flex-row justify-center items-center">
           <div className="flex space-x-6 items-center justify-center mb-2">
             <a
-              href="mailto:someone@example.com"
+              href="mailto:abiyoga@gmail.com"
               className="text-muted-foreground hover:text-foreground transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -15,7 +15,7 @@ const Footer = () => {
               <Mail className="w-5 h-5" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/Abiyogaaa"
               className="text-muted-foreground hover:text-foreground transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -23,7 +23,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/abiyoga-wahyu-pratama-897335295/"
               className="text-muted-foreground hover:text-foreground transition-colors"
               target="_blank"
               rel="noopener noreferrer"
