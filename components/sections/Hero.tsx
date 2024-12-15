@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [typedText, setTypedText] = useState('');
-  const fullText = "Web Developer & Program Analyst";
+  const fullText = "Program Analyst & Web Developer";
 
   // Typing effect
   useEffect(() => {
