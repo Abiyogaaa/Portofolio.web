@@ -141,7 +141,7 @@ const About = () => {
     rel="noopener noreferrer"
     aria-label="TikTok"
   >
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black shadow-md group-hover:shadow-lg transition-shadow">
+    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-gray-700 via-gray-800 to-black shadow-md group-hover:shadow-lg transition-shadow">
       <FaTiktok className="w-5 h-5 text-white" />
     </div>
     <span className="absolute mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
@@ -157,7 +157,7 @@ const About = () => {
     rel="noopener noreferrer"
     aria-label="Threads"
   >
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-gray-800 via-black to-gray-900 shadow-md group-hover:shadow-lg transition-shadow">
+    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-gray-700 via-gray-800 to-black shadow-md group-hover:shadow-lg transition-shadow">
       <BiHash className="w-5 h-5 text-white" />
     </div>
     <span className="absolute mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
