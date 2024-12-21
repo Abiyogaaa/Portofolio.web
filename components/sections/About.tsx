@@ -57,7 +57,7 @@ const About = () => {
               className={`relative ${!isExpanded ? 'max-h-[300px] overflow-hidden' : ''}`}
             >
               <motion.p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg font-medium first-letter:text-4xl first-letter:font-bold first-letter:text-purple-600 dark:first-letter:text-pink-500 first-letter:mr-1 first-letter:float-left">
-                I am Abiyoga Wahyu Pratama, a fresh graduate of Bachelor of Informatics Engineering, with a BNSP certified program analyst and specialization in web programming, as well as application development, web design, and photography. Over the years, I have gained hands-on experience working with various frameworks and technologies, including PHP Native, CodeIgniter 3, Laravel, Bootstrap, Livewire, Alpine.js, and Filament.
+                I am Abiyoga Wahyu Pratama, a fresh graduate of Bachelor of Informatics Engineering, with a BNSP certified program analyst and specialization in web programming, as well as application development, web design, and photography. Over the years, I have gained hands-on experience working with various frameworks and technologies, including PHP Native, CodeIgniter 3, Laravel, Bootstrap, Livewire, Alpine.js, Filament, React.js, Vue.js and Next.js.
               </motion.p>
 
               <div className={!isExpanded ? 'hidden' : ''}>
