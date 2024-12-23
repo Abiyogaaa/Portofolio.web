@@ -69,101 +69,101 @@ const About = () => {
                   In addition to my technical expertise, I frequently take certifications and courses to enhance my skills. These include the BNSP Program Analyst certification and various other professional development programs that enrich my knowledge and keep me updated with industry standards.
                 </motion.p>
                 <div className="grid grid-cols-6 gap-2 mt-8 mx-0 mb-8 justify-center sm:grid-cols-6">
-  {/* Email */}
-  <a
-    href="mailto:abiyoga@gmail.com"
-    className="relative group transform hover:scale-105 transition-transform duration-300"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Email"
-  >
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-md group-hover:shadow-lg transition-shadow">
-      <Mail className="w-5 h-5 text-white" />
-    </div>
-    <span className="absolute mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-      Email
-    </span>
-  </a>
+   {/* Email */}
+   <a
+      href="mailto:abiyoga@gmail.com"
+      className="relative group transform hover:scale-105 transition-transform duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Email"
+    >
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
+        <Mail className="w-5 h-5 text-white dark:text-gray-950" />
+      </div>
+      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
+        Email
+      </span>
+    </a>
 
-  {/* GitHub */}
-  <a
-    href="https://github.com/Abiyogaaa"
-    className="relative group transform hover:scale-105 transition-transform duration-300"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Github"
-  >
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-gray-700 via-gray-800 to-black shadow-md group-hover:shadow-lg transition-shadow">
-      <Github className="w-5 h-5 text-white" />
-    </div>
-    <span className="absolute mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-      GitHub
-    </span>
-  </a>
+    {/* GitHub */}
+    <a
+      href="https://github.com/Abiyogaaa"
+      className="relative group transform hover:scale-105 transition-transform duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Github"
+    >
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
+        <Github className="w-5 h-5 text-white dark:text-gray-950" />
+      </div>
+      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
+        GitHub
+      </span>
+    </a>
 
-  {/* LinkedIn */}
-  <a
-    href="https://www.linkedin.com/in/abiyoga-wahyu-pratama-897335295/"
-    className="relative group transform hover:scale-105 transition-transform duration-300"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-  >
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-700 shadow-md group-hover:shadow-lg transition-shadow">
-      <Linkedin className="w-5 h-5 text-white" />
-    </div>
-    <span className="absolute mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-      LinkedIn
-    </span>
-  </a>
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/abiyoga-wahyu-pratama-897335295/"
+      className="relative group transform hover:scale-105 transition-transform duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+    >
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
+        <Linkedin className="w-5 h-5 text-white dark:text-gray-950" />
+      </div>
+      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
+        LinkedIn
+      </span>
+    </a>
 
-  {/* Instagram */}
-  <a
-    href="https://instagram.com"
-    className="relative group transform hover:scale-105 transition-transform duration-300"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-  >
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-orange-400 shadow-md group-hover:shadow-lg transition-shadow">
-      <Instagram className="w-5 h-5 text-white" />
-    </div>
-    <span className="absolute mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-      Instagram
-    </span>
-  </a>
+    {/* Instagram */}
+    <a
+      href="https://instagram.com"
+      className="relative group transform hover:scale-105 transition-transform duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
+        <Instagram className="w-5 h-5 text-white dark:text-gray-950" />
+      </div>
+      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
+        Instagram
+      </span>
+    </a>
 
-  {/* TikTok */}
-  <a
-    href="https://www.tiktok.com/@yourprofile"
-    className="relative group transform hover:scale-105 transition-transform duration-300"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="TikTok"
-  >
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-gray-700 via-gray-800 to-black shadow-md group-hover:shadow-lg transition-shadow">
-      <FaTiktok className="w-5 h-5 text-white" />
-    </div>
-    <span className="absolute mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-      TikTok
-    </span>
-  </a>
+    {/* TikTok */}
+    <a
+      href="https://www.tiktok.com/@yourprofile"
+      className="relative group transform hover:scale-105 transition-transform duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok"
+    >
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
+        <FaTiktok className="w-5 h-5 text-white dark:text-gray-950" />
+      </div>
+      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
+        TikTok
+      </span>
+    </a>
 
-  {/* Threads */}
-  <a
-    href="https://www.threads.net/@yourprofile"
-    className="relative group transform hover:scale-105 transition-transform duration-300"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Threads"
-  >
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-gray-700 via-gray-800 to-black shadow-md group-hover:shadow-lg transition-shadow">
-      <BiHash className="w-5 h-5 text-white" />
-    </div>
-    <span className="absolute mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-      Threads
-    </span>
-  </a>
+    {/* Threads */}
+    <a
+      href="https://www.threads.net/@yourprofile"
+      className="relative group transform hover:scale-105 transition-transform duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Threads"
+    >
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
+        <BiHash className="w-5 h-5 text-white dark:text-gray-950" />
+      </div>
+      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
+        Threads
+      </span>
+    </a>
 </div>
 
 

@@ -28,8 +28,9 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   const navItems = [
-    { name: "Home", href: "#home" },
+    // { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "My Journey", href: "#my-journey" },
     { name: "Certificate", href: "#certificate" },
     { name: "Projects", href: "#projects" },
   ];
@@ -39,10 +40,10 @@ const Header = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? "bg-white dark:bg-black shadow-md" : ""}`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-1 py-4">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-2xl font-bold ml-8">
-            Abiy.
+            Abiyoga.
           </a>
           <div className="flex space-x-4 mr-5">
             {/* Desktop Navigation */}
@@ -101,7 +102,7 @@ const Header = () => {
 
             {/* Close Button */}
             <button
-              className="absolute top-4 right-4 text-gray-950 dark:text-white hover:text-black px-7"
+              className="absolute top-4 right-4 text-gray-950 dark:text-white hover:text-black px-3"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <X className="h-8 w-8 font-bold" />

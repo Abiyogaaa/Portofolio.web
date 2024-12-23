@@ -7,30 +7,10 @@ import Link from 'next/link';
 
 const projectsData = [
   {
-    title: "Rentcar-Antariks",
-    description: "A full-featured Rentcar platform built with PHP Native and Bootstrap. This platform provides a comprehensive car rental management system with a user-friendly interface to facilitate the booking and management process.",
-    image: "/Rentcar.png",
-    tags: ["PHP Native", "MySQL", "Bootstrap"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
-    textColor: "text-white dark:text-black"
-  },
-  {
-    title: "E-SAKIP",
-    description: "Government Agency Performance Accountability System (E-SAKIP) built for the Transportation Department of Banjarbaru City. This application assists in systematic and structured evaluation and reporting of agency performance.",
-    image: "/E-SAKIP.png",
-    tags: ["Bootsrap", "Codeigniter3", "MySQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
-    textColor: "text-white dark:text-black"
-  },
-  {
-    title: "ON-VOLUNTEERS",
-    description: "ON-VOLUNTEERS is an intuitive web-based application designed to archive and manage volunteer data efficiently. It enables organizations to record, organize, and access volunteer information seamlessly, empowering collaboration and streamlined volunteer engagement.",
-    image: "/on-volunteers.png",
-    tags: ["Laravel", "Filament", "Sqlite", "Livewire", "Alpine.js"],
+    title: "Abiy.",
+    description: "A personal portfolio website showcasing various works and projects in software development and web design. Built with modern technologies to provide optimal user experience, featuring responsive design and interactive elements.",
+    image: "/abiy.png",
+    tags: ["React.js", "Vue.js", "Next.js"],
     liveUrl: "#",
     githubUrl: "#",
     color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
@@ -47,18 +27,42 @@ const projectsData = [
     textColor: "text-white dark:text-black"
   },
   {
-    title: "Abiy.",
-    description: "A personal portfolio website showcasing various works and projects in software development and web design. Built with modern technologies to provide optimal user experience, featuring responsive design and interactive elements.",
-    image: "/abiy.png",
-    tags: ["React.js", "Vue.js", "Next.js"],
+    title: "ON-VOLUNTEERS",
+    description: "ON-VOLUNTEERS is an intuitive web-based application designed to archive and manage volunteer data efficiently. It enables organizations to record, organize, and access volunteer information seamlessly, empowering collaboration and streamlined volunteer engagement.",
+    image: "/on-volunteers.png",
+    tags: ["Laravel", "Filament", "Sqlite", "Livewire", "Alpine.js"],
     liveUrl: "#",
     githubUrl: "#",
     color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
     textColor: "text-white dark:text-black"
   },
+    {
+    title: "E-SAKIP",
+    description: "Government Agency Performance Accountability System (E-SAKIP) built for the Transportation Department of Banjarbaru City. This application assists in systematic and structured evaluation and reporting of agency performance.",
+    image: "/E-SAKIP.png",
+    tags: ["Bootsrap", "Codeigniter3", "MySQL"],
+    liveUrl: "#",
+    githubUrl: "#",
+    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
+    textColor: "text-white dark:text-black"
+  },
+  {
+    title: "Rentcar-Antariks",
+    description: "A full-featured Rentcar platform built with PHP Native and Bootstrap. This platform provides a comprehensive car rental management system with a user-friendly interface to facilitate the booking and management process.",
+    image: "/Rentcar.png",
+    tags: ["PHP Native", "MySQL", "Bootstrap"],
+    liveUrl: "#",
+    githubUrl: "#",
+    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
+    textColor: "text-white dark:text-black"
+  },
+
+
+  
+  
 ];
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 3;
 
 const Projects = () => {
   const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
@@ -85,7 +89,7 @@ const Projects = () => {
           Featured Projects
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-0">
           {projectsData.slice(0, visibleItems).map((project, index) => (
             <motion.div
               key={project.title}
@@ -172,7 +176,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10 ">
           {showLoadMore && hasMoreItems && (
             <Button
               onClick={handleLoadMore}
@@ -188,7 +192,7 @@ const Projects = () => {
               variant="default"
               className="w-full px-6 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
-              Lihat Semua Proyek
+              Lihat Detail Semua Proyek
             </Button>
           </Link>
         </div>

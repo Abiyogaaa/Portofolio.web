@@ -108,8 +108,8 @@ const projectsData: Project[] = [
       }
     ],
     role: {
-      en: "Backend Developer",
-      id: "Backend Developer"
+      en: "Full Stack Developer",
+      id: "Full Stack Developer"
     }
   },
   {

@@ -362,7 +362,7 @@ const certificateData = [
 
 ];
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 3;
 
 const Certificate = () => {
   const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
@@ -483,7 +483,7 @@ const Certificate = () => {
             <Button
               onClick={handleLoadMore}
               variant="outline"
-              className="w-full sm:w-auto px-6 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 hover:shadow-lg"
+              className="w-full sm:w-auto px-8 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 hover:shadow-lg"
             >
               Tampilkan Lebih Banyak
             </Button>
@@ -494,7 +494,7 @@ const Certificate = () => {
               variant="default"
               className="w-full px-6 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
-              Lihat Semua Sertifikat
+              Lihat Detail Semua Sertifikat
             </Button>
           </Link>
         </div>

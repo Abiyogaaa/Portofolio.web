@@ -587,7 +587,7 @@ export default function CertificatesPage() {
                         {cert.skills.map((skill, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 text-sm rounded-full"
+                            className="px-2 py-1 bg-gray-950 dark:bg-blue-50 text-blue-50 dark:text-gray-950 text-sm rounded-full"
                           >
                             {skill}
                           </span>
