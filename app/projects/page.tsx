@@ -30,40 +30,124 @@ interface Project {
 }
 
 const projectsData: Project[] = [
+  
   {
-    title: "Rentcar-Antariks",
+    title: "Abiy.",
     description: {
-      en: "A full-featured Rentcar platform built with PHP Native and Bootstrap. This platform provides a comprehensive car rental management system with a user-friendly interface to facilitate the booking and management process.",
-      id: "Platform rental mobil lengkap yang dibangun dengan PHP Native dan Bootstrap. Platform ini menyediakan sistem manajemen rental mobil yang komprehensif dengan antarmuka yang ramah pengguna untuk memudahkan proses pemesanan dan pengelolaan."
+      en: "A personal portfolio website showcasing various works and projects in software development and web design. Built with modern technologies to provide optimal user experience, featuring responsive design and interactive elements.",
+      id: "Portfolio web personal yang menampilkan berbagai karya dan proyek dalam pengembangan perangkat lunak dan desain web. Dibangun dengan teknologi modern untuk memberikan pengalaman pengguna yang optimal."
     },
-    image: "/Rentcar.png",
-    tags: ["PHP Native", "MySQL", "Bootstrap"],
+    image: "/abiy.png",
+    tags: ["React.js", "Vue.js", "Next.js"],
     liveUrl: "#",
     githubUrl: "#",
     color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
     textColor: "text-white dark:text-black",
-    startDate: "Jan 2023",
-    endDate: "Mar 2023",
+    startDate: "Jan 2024",
+    endDate: "Present",
     features: [
       {
-        en: "Online car booking system",
-        id: "Sistem pemesanan mobil online"
+        en: "Interactive project showcase",
+        id: "Showcase proyek interaktif"
       },
       {
-        en: "Admin panel for inventory management",
-        id: "Panel admin untuk manajemen inventaris"
+        en: "Smooth and responsive animations",
+        id: "Animasi smooth dan responsif"
       },
       {
-        en: "Integrated payment system",
-        id: "Sistem pembayaran terintegrasi"
+        en: "Dark/light mode",
+        id: "Mode gelap/terang"
       },
       {
-        en: "Rental schedule management",
-        id: "Manajemen jadwal rental"
+        en: "SEO optimization",
+        id: "Optimasi SEO"
       },
       {
-        en: "Transaction and revenue reports",
-        id: "Laporan transaksi dan pendapatan"
+        en: "Modern technology integration",
+        id: "Integrasi dengan berbagai teknologi modern"
+      }
+    ],
+    role: {
+      en: "Frontend Developer",
+      id: "Frontend Developer"
+    }
+  },
+
+   {
+    title: "ON-VOLUNTEERS",
+    description: {
+      en: "ON-VOLUNTEERS is an intuitive web-based application designed to archive and manage volunteer data efficiently. It enables organizations to record, organize, and access volunteer information seamlessly, empowering collaboration and streamlined volunteer engagement.",
+      id: "ON-VOLUNTEERS adalah aplikasi berbasis web untuk pengelolaan data relawan. Sistem ini dirancang untuk memudahkan organisasi dalam mencatat, mengorganisir, dan mengakses informasi relawan secara efisien."
+    },
+    image: "/on-volunteers.png",
+    tags: ["Laravel", "Filament", "Sqlite", "Livewire", "Alpine.js"],
+    liveUrl: "#",
+    githubUrl: "#",
+    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
+    textColor: "text-white dark:text-black",
+    startDate: "Aug 2023",
+    endDate: "Oct 2023",
+    features: [
+      {
+        en: "Volunteer data management",
+        id: "Manajemen data relawan"
+      },
+      {
+        en: "Volunteer categorization system",
+        id: "Sistem kategorisasi relawan"
+      },
+      {
+        en: "Advanced search and filtering",
+        id: "Pencarian dan filter data"
+      },
+      {
+        en: "Analytics dashboard",
+        id: "Dashboard analitik"
+      },
+      {
+        en: "Activity reporting system",
+        id: "Sistem pelaporan aktivitas"
+      }
+    ],
+    role: {
+      en: "Full Stack Developer",
+      id: "Pengembang Full Stack"
+    }
+  },
+    {
+    title: "CODE.AY",
+    description: {
+      en: "CODE.AY is a programming blog platform designed to share coding knowledge. It provides tutorials, tips and tricks, and latest updates in the programming world, helping developers stay informed and improve their skills.",
+      id: "Platform blog pemrograman yang dirancang untuk berbagi pengetahuan seputar coding. CODE.AY menyediakan konten tutorial, tips dan trik, serta update terbaru dalam dunia pemrograman."
+    },
+    image: "/code.ay.png",
+    tags: ["Laravel", "MySQL", "Boostrap"],
+    liveUrl: "#",
+    githubUrl: "#",
+    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
+    textColor: "text-white dark:text-black",
+    startDate: "Nov 2023",
+    endDate: "Dec 2023",
+    features: [
+      {
+        en: "Content management system",
+        id: "Sistem manajemen konten"
+      },
+      {
+        en: "Article categorization",
+        id: "Kategorisasi artikel"
+      },
+      {
+        en: "Comment system",
+        id: "Sistem komentar"
+      },
+      {
+        en: "Article search functionality",
+        id: "Pencarian artikel"
+      },
+      {
+        en: "Admin panel for content management",
+        id: "Panel admin untuk pengelolaan konten"
       }
     ],
     role: {
@@ -113,39 +197,39 @@ const projectsData: Project[] = [
     }
   },
   {
-    title: "ON-VOLUNTEERS",
+    title: "Rentcar-Antariks",
     description: {
-      en: "ON-VOLUNTEERS is an intuitive web-based application designed to archive and manage volunteer data efficiently. It enables organizations to record, organize, and access volunteer information seamlessly, empowering collaboration and streamlined volunteer engagement.",
-      id: "ON-VOLUNTEERS adalah aplikasi berbasis web untuk pengelolaan data relawan. Sistem ini dirancang untuk memudahkan organisasi dalam mencatat, mengorganisir, dan mengakses informasi relawan secara efisien."
+      en: "A full-featured Rentcar platform built with PHP Native and Bootstrap. This platform provides a comprehensive car rental management system with a user-friendly interface to facilitate the booking and management process.",
+      id: "Platform rental mobil lengkap yang dibangun dengan PHP Native dan Bootstrap. Platform ini menyediakan sistem manajemen rental mobil yang komprehensif dengan antarmuka yang ramah pengguna untuk memudahkan proses pemesanan dan pengelolaan."
     },
-    image: "/on-volunteers.png",
-    tags: ["Laravel", "Filament", "Sqlite", "Livewire", "Alpine.js"],
+    image: "/Rentcar.png",
+    tags: ["PHP Native", "MySQL", "Bootstrap"],
     liveUrl: "#",
     githubUrl: "#",
     color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
     textColor: "text-white dark:text-black",
-    startDate: "Aug 2023",
-    endDate: "Oct 2023",
+    startDate: "Jan 2023",
+    endDate: "Mar 2023",
     features: [
       {
-        en: "Volunteer data management",
-        id: "Manajemen data relawan"
+        en: "Online car booking system",
+        id: "Sistem pemesanan mobil online"
       },
       {
-        en: "Volunteer categorization system",
-        id: "Sistem kategorisasi relawan"
+        en: "Admin panel for inventory management",
+        id: "Panel admin untuk manajemen inventaris"
       },
       {
-        en: "Advanced search and filtering",
-        id: "Pencarian dan filter data"
+        en: "Integrated payment system",
+        id: "Sistem pembayaran terintegrasi"
       },
       {
-        en: "Analytics dashboard",
-        id: "Dashboard analitik"
+        en: "Rental schedule management",
+        id: "Manajemen jadwal rental"
       },
       {
-        en: "Activity reporting system",
-        id: "Sistem pelaporan aktivitas"
+        en: "Transaction and revenue reports",
+        id: "Laporan transaksi dan pendapatan"
       }
     ],
     role: {
@@ -153,88 +237,6 @@ const projectsData: Project[] = [
       id: "Pengembang Full Stack"
     }
   },
-  {
-    title: "CODE.AY",
-    description: {
-      en: "CODE.AY is a programming blog platform designed to share coding knowledge. It provides tutorials, tips and tricks, and latest updates in the programming world, helping developers stay informed and improve their skills.",
-      id: "Platform blog pemrograman yang dirancang untuk berbagi pengetahuan seputar coding. CODE.AY menyediakan konten tutorial, tips dan trik, serta update terbaru dalam dunia pemrograman."
-    },
-    image: "/code.ay.png",
-    tags: ["Laravel", "MySQL", "Boostrap"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
-    textColor: "text-white dark:text-black",
-    startDate: "Nov 2023",
-    endDate: "Dec 2023",
-    features: [
-      {
-        en: "Content management system",
-        id: "Sistem manajemen konten"
-      },
-      {
-        en: "Article categorization",
-        id: "Kategorisasi artikel"
-      },
-      {
-        en: "Comment system",
-        id: "Sistem komentar"
-      },
-      {
-        en: "Article search functionality",
-        id: "Pencarian artikel"
-      },
-      {
-        en: "Admin panel for content management",
-        id: "Panel admin untuk pengelolaan konten"
-      }
-    ],
-    role: {
-      en: "Full Stack Developer",
-      id: "Pengembang Full Stack"
-    }
-  },
-  {
-    title: "Abiy.",
-    description: {
-      en: "A personal portfolio website showcasing various works and projects in software development and web design. Built with modern technologies to provide optimal user experience, featuring responsive design and interactive elements.",
-      id: "Portfolio web personal yang menampilkan berbagai karya dan proyek dalam pengembangan perangkat lunak dan desain web. Dibangun dengan teknologi modern untuk memberikan pengalaman pengguna yang optimal."
-    },
-    image: "/abiy.png",
-    tags: ["React.js", "Vue.js", "Next.js"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
-    textColor: "text-white dark:text-black",
-    startDate: "Jan 2024",
-    endDate: "Present",
-    features: [
-      {
-        en: "Interactive project showcase",
-        id: "Showcase proyek interaktif"
-      },
-      {
-        en: "Smooth and responsive animations",
-        id: "Animasi smooth dan responsif"
-      },
-      {
-        en: "Dark/light mode",
-        id: "Mode gelap/terang"
-      },
-      {
-        en: "SEO optimization",
-        id: "Optimasi SEO"
-      },
-      {
-        en: "Modern technology integration",
-        id: "Integrasi dengan berbagai teknologi modern"
-      }
-    ],
-    role: {
-      en: "Frontend Developer",
-      id: "Frontend Developer"
-    }
-  }
 ];
 
 const translations = {

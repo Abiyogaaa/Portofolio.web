@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Eye, Download } from "lucide-react";
+import { Eye, Download, ExternalLink } from "lucide-react";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,6 +13,7 @@ const certificateData = [
     date: "2024 - 2027",
     image: "/image/lsp.jpg",
     pdfUrl: "/pdf/sertifikat-LSP.pdf", 
+    verificationUrl: "https://bnsp.go.id",
     credentialId: "13218165",
     color: "text-white dark:text-black",
   },
@@ -22,6 +23,7 @@ const certificateData = [
     date: "Nov 2024",
     image: "/image/stanford01.jpg",
     pdfUrl: "/pdf/stanford01.pdf",
+    verificationUrl: "https://coursera.org/verify/CYPK5NNYCNWA",
     credentialId: "CYPK5NNYCNWA",
     color: "text-white dark:text-black",
   },
@@ -31,6 +33,7 @@ const certificateData = [
     date: "Des 2024", 
     image: "/image/Vanderbilt04.jpg",
     pdfUrl: "/pdf/Vanderbilt04.pdf",
+    verificationUrl: "https://www.coursera.org/account/accomplishments/specialization/MDXV4Q5DV0UR",
     credentialId: "MDXV4Q5DV0UR",
     color: "text-white dark:text-black",
   },
@@ -40,6 +43,7 @@ const certificateData = [
     date: "Des 2024",
     image: "/image/Vanderbilt01.jpg",
     pdfUrl: "/pdf/Vanderbilt01.pdf",
+    verificationUrl: "https://coursera.org/verify/SK8YHQ830GRT",
     credentialId: "SK8YHQ830GRT",
     color: "text-white dark:text-black",
   },
@@ -49,6 +53,7 @@ const certificateData = [
     date: "Des 2024",
     image: "/image/Vanderbilt02.jpg",
     pdfUrl: "/pdf/Vanderbilt02.pdf",
+    verificationUrl: "https://coursera.org/verify/YSYTDPFVF0MQ",
     credentialId: "YSYTDPFVF0MQ",
     color: "text-white dark:text-black",
   }, 
@@ -58,6 +63,7 @@ const certificateData = [
     date: "Des 2024",
     image: "/image/Vanderbilt03.jpg", 
     pdfUrl: "/pdf/Vanderbilt03.pdf",
+    verificationUrl: "https://coursera.org/verify/SDJYLTOWC54W",
     credentialId: "SDJYLTOWC54W",
     color: "text-white dark:text-black",
   },
@@ -67,6 +73,7 @@ const certificateData = [
     date: "Nov 2024",
     image: "/image/Microsoft04.jpg",
     pdfUrl: "/pdf/Microsoft04.pdf",
+    verificationUrl: "https://coursera.org/verify/VDDTXBW38FS3",
     credentialId: "VDDTXBW38FS3",
     skills: ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint"],
     color: "text-white dark:text-black",
@@ -77,6 +84,7 @@ const certificateData = [
     date: "Nov 2024",
     image: "/image/Microsoft01.jpg",
     pdfUrl: "/pdf/Microsoft01.pdf",
+    verificationUrl: "https://coursera.org/verify/EG21BTKFC1JX",
     credentialId: "EG21BTKFC1JX",
     color: "text-white dark:text-black",
   },
@@ -86,6 +94,7 @@ const certificateData = [
     date: "Nov 2024",
     image: "/image/Microsoft02.jpg",
     pdfUrl: "/pdf/Microsoft02.pdf",
+    verificationUrl: "https://coursera.org/verify/IH6JLGACG7QX",
     credentialId: "IH6JLGACG7QX",
     color: "text-white dark:text-black",
   },
@@ -95,6 +104,7 @@ const certificateData = [
     date: "Nov 2024",
     image: "/image/Microsoft03.jpg",
     pdfUrl: "/pdf/Microsoft03.pdf",
+    verificationUrl: "https://coursera.org/verify/KP926N6JESRT",
     credentialId: "KP926N6JESRT",
     color: "text-white dark:text-black",
   },
@@ -105,6 +115,7 @@ const certificateData = [
     date: "Sep 2024 - Sep 2027",
     image: "/image/Belajar Dasar AI_page-0001.jpg",
     pdfUrl: "/pdf/01d.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/L4PQ1D3Y4XO1",
     credentialId: "L4PQ1D3Y4XO1",
     skills: ["Artificial Intelligence (AI)"],
     color: "text-white dark:text-black",
@@ -115,6 +126,7 @@ const certificateData = [
     date: "Sep 2024 - Sep 2027",
     image: "/image/Belajar Dasar Manajemen Proyek_page-0001.jpg",
     pdfUrl: "/pdf/02d.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/2VX3RDJL4ZYQ",
     credentialId: "2VX3RDJL4ZYQ",
     skills: ["Project Management"],
     color: "text-white dark:text-black",
@@ -125,6 +137,7 @@ const certificateData = [
     date: "Sep 2024 - Sep 2027",
     image: "/image/Belajar Dasar Structured Query Language (SQL)_page-0001.jpg",
     pdfUrl: "/pdf/03d.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/JLX1438YGX72",
     credentialId: "JLX1438YGX72",
     skills: ["Nysql"],
     color: "text-white dark:text-black",
@@ -135,6 +148,7 @@ const certificateData = [
     date: "Sep 2024 - Sep 2027",
     image: "/image/Belajar Membuat Aplikasi Back-End untuk Pemula_page-0001.jpg",
     pdfUrl: "/pdf/04d.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/6RPN15L94X2M",
     credentialId: "6RPN15L94X2M",
     skills: ["Node.js"],
     color: "text-white dark:text-black",
@@ -145,6 +159,7 @@ const certificateData = [
     date: "Sep 2024 - Sep 2027",
     image: "/image/Belajar Strategi Pengembangan Diri_page-0001.jpg",
     pdfUrl: "/pdf/05d.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/98XW5RWOLPM3",
     credentialId: "98XW5RWOLPM3",
     color: "text-white dark:text-black",
   },
@@ -154,6 +169,7 @@ const certificateData = [
     date: "Sep 2024 - Sep 2027",
     image: "/image/Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)_page-0001.jpg",
     pdfUrl: "/pdf/06d.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/07Z609Q1MZQR",
     credentialId: "07Z609Q1MZQR",
     skills: ["Amazon Web Services (AWS)", "Cloud Computing"],
     color: "text-white dark:text-black",
@@ -164,6 +180,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera QMITUWJ1T8ON_page-0001.jpg",
     pdfUrl: "/pdf/colorado04.pdf",
+    verificationUrl: "https://coursera.org/verify/QMITUWJ1T8ON",
     credentialId: "QMITUWJ1T8ON",
     color: "text-white dark:text-black",
   },
@@ -173,6 +190,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera 4T71YV6WDJE0_page-0001.jpg",
     pdfUrl: "/pdf/colorado03.jpg",
+    verificationUrl: "https://coursera.org/verify/4T71YV6WDJE0",
     credentialId: "4T71YV6WDJE0",
     color: "text-white dark:text-black",
   },
@@ -182,6 +200,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera GH7KYHUHTJQL_page-0001.jpg",
     pdfUrl: "/pdf/colorado01.pdf",
+    verificationUrl: "https://coursera.org/verify/GH7KYHUHTJQL",
     credentialId: "GH7KYHUHTJQL",
     color: "text-white dark:text-black",
   },
@@ -191,6 +210,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera 1L662BI91QSB_page-0001.jpg",
     pdfUrl: "/pdf/colorado02.pdf",
+    verificationUrl: "https://coursera.org/verify/1L662BI91QSB",
     credentialId: "1L662BI91QSB",
     color: "text-white dark:text-black",
   },
@@ -201,6 +221,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/aies_page-0001.jpg",
     pdfUrl: "/pdf/aies.pdf",
+    verificationUrl: "https://coursera.org/verify/27S7R5OYH4CN",
     credentialId: "27S7R5OYH4CN",
     skills: ["Artificial Intelligence (AI)"],
     color: "text-white dark:text-black",
@@ -211,6 +232,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera J31H3IPRJPH5_page-0001.jpg",
     pdfUrl: "/pdf/06g.pdf",
+    verificationUrl: "https://coursera.org/verify/J31H3IPRJPH5",
     credentialId: "J31H3IPRJPH5",
     color: "text-white dark:text-black",
   },
@@ -220,6 +242,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera NVQK5OE1JISD_page-0001.jpg",
     pdfUrl: "/pdf/01g.pdf",
+    verificationUrl: "https://coursera.org/verify/NVQK5OE1JISD",
     credentialId: "NVQK5OE1JISD",
     skills: ["Technical Support"],
     color: "text-white dark:text-black",
@@ -230,6 +253,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera KO8602OT7N9Y_page-0001.jpg",
     pdfUrl: "/pdf/02g.jpg",
+    verificationUrl: "https://coursera.org/verify/KO8602OT7N9Y",
     credentialId: "KO8602OT7N9Y",
     color: "text-white dark:text-black",
   },
@@ -239,6 +263,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera GFVP77LP2MOZ_page-0001.jpg",
     pdfUrl: "/pdf/03g.pdf",
+    verificationUrl: "https://coursera.org/verify/GFVP77LP2MOZ",
     credentialId: "GFVP77LP2MOZ",
     color: "text-white dark:text-black",
   },
@@ -249,6 +274,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera KCNM15ETJ869_page-0001.jpg",
     pdfUrl: "/pdf/04g.pdf",
+    verificationUrl: "https://coursera.org/verify/KCNM15ETJ869",
     credentialId: "KCNM15ETJ869",
     color: "text-white dark:text-black",
   },
@@ -258,6 +284,7 @@ const certificateData = [
     date: "Sep 2024",
     image: "/image/Coursera CKRBS9RT0SW5_page-0001.jpg",
     pdfUrl: "/pdf/05g.pdf",
+    verificationUrl: "https://coursera.org/verify/CKRBS9RT0SW5",
     credentialId: "CKRBS9RT0SW5",
     skills: ["IT Security"],
     color: "text-white dark:text-black",
@@ -268,6 +295,7 @@ const certificateData = [
     date: "Jun 2024 - Jun 2027",
     image: "/image/Belajar Dasar Data Science_page-0001.jpg",
     pdfUrl: "/pdf/Belajar Dasar Data Science.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/GRX5O44K2P0M",
     credentialId: "GRX5O44K2P0M",
     skills: ["MySQL", "Data Analysis"],
     color: "text-white dark:text-black",
@@ -278,6 +306,7 @@ const certificateData = [
     date: "Jun 2024 - Jun 2027",
     image: "/image/Belajar Membuat Front-End Web untuk Pemula_page-0001.jpg",
     pdfUrl: "/pdf/Belajar Membuat Front-End Web untuk Pemula.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/07Z60QW52ZQR",
     credentialId: "07Z60QW52ZQR",
     skills: ["Document Object Model (DOM)", "Browser Object Model (BOM)", "Event Handling", "Web Storage API"],
     color: "text-white dark:text-black",
@@ -288,6 +317,7 @@ const certificateData = [
     date: "Jun 2024 - Jun 2027",
     image: "/image/Memulai Pemrograman dengan Dart_page-0001.jpg",
     pdfUrl: "/pdf/Memulai Pemrograman dengan Dart.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/72ZDV5EVLZYW",
     credentialId: "72ZDV5EVLZYW",
     skills: ["Dart", "Object-Oriented Programming (OOP)"],
     color: "text-white dark:text-black",
@@ -298,6 +328,7 @@ const certificateData = [
     date: "Jun 2024 - Jun 2027",
     image: "/image/Memulai Pemrograman dengan Kotlin_page-0001.jpg",
     pdfUrl: "/pdf/Memulai Pemrograman dengan Kotlin.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/N9ZOM9EM6PG5",
     credentialId: "N9ZOM9EM6PG5",
     skills: ["Kotlin", "Object-Oriented Programming (OOP)"],
     color: "text-white dark:text-black",
@@ -308,6 +339,7 @@ const certificateData = [
     date: "Mei 2024 - Mei 2027",
     image: "/image/Belajar Dasar Pemrograman JavaScript_page-0001.jpg",
     pdfUrl: "/pdf/Belajar Dasar Pemrograman JavaScript.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/GRX5OQOMRP0M",
     credentialId: "GRX5OQOMRP0M",
     skills: ["Object-Oriented Programming (OOP)", "Data Structures", "Functional Programming", "JavaScript"],
     color: "text-white dark:text-black",
@@ -318,6 +350,7 @@ const certificateData = [
     date: "Mei 2024",
     image: "/image/International Bootcamp Data Analyst_page-0001.jpg",
     pdfUrl: "/pdf/International Bootcamp Data Analyst.pdf",
+    verificationUrl: "https://smartpath.id",
     credentialId: "078/SP/VI/2024",
     skills: ["Data Analysis", "MySQL"],
     color: "text-white dark:text-black",
@@ -328,6 +361,7 @@ const certificateData = [
     date: "Apr 2024 - Apr 2027",
     image: "/image/Belajar Dasar Pemrograman Web_page-0001.jpg",
     pdfUrl: "/pdf/Belajar Dasar Pemrograman Web.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/MRZMEDL4NPYQ",
     credentialId: "MRZMEDL4NPYQ",
     skills: ["HTML", "Cascading Style Sheets (CSS)"],
     color: "text-white dark:text-black",
@@ -338,6 +372,7 @@ const certificateData = [
     date: "Mar 2024 - Mar 2027",
     image: "/image/Memulai Pemrograman Dengan C_page-0001.jpg",
     pdfUrl: "/pdf/Memulai Pemrograman Dengan C.pdf",
+    verificationUrl: "https://www.dicoding.com/certificates/MRZM82V8KZYQ",
     credentialId: "MRZM82V8KZYQ",
     color: "text-white dark:text-black",
   },
@@ -347,6 +382,7 @@ const certificateData = [
     date: "2024",
     image: "/image/Membuat Aplikasi To Do List dengan Laravel_page-0001.jpg",
     pdfUrl: "/pdf/Membuat Aplikasi To Do List dengan Laravel.pdf",
+    verificationUrl: "https://duniacoding.id",
     skills: ["Laravel", "PHP", "JavaScript", "HTML", "Cascading Style Sheets (CSS)", "MySQL"],
     color: "text-white dark:text-black",
   },
@@ -356,6 +392,7 @@ const certificateData = [
     date: "2024",
     image: "/image/Membuat Website Toko Online dengan Laravel_page-0001.jpg",
     pdfUrl: "/pdf/Membuat Website Toko Online dengan Laravel.pdf",
+    verificationUrl: "https://duniacoding.id",
     skills: ["Laravel", "PHP", "JavaScript", "HTML", "Cascading Style Sheets (CSS)", "MySQL"],
     color: "text-white dark:text-black",
   }
@@ -439,13 +476,13 @@ const Certificate = () => {
                         Lihat PDF
                       </Button>
                       <Button
-                        onClick={() => window.open(cert.pdfUrl, '_blank')}
-                        variant="outline"
-                        className="flex items-center gap-2"
-                      >
-                        <Download size={16} />
-                        Unduh
-                      </Button>
+                          onClick={() => window.open(cert.verificationUrl, '_blank')}
+                          variant="outline"
+                          className="flex items-center gap-2"
+                        >
+                          <ExternalLink size={16} />
+                          Verifikasi
+                        </Button>
                     </div>
                   </div>
                 </CardContent>

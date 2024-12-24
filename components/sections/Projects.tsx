@@ -17,16 +17,6 @@ const projectsData = [
     textColor: "text-white dark:text-black"
   },
   {
-    title: "CODE.AY",
-    description: "CODE.AY is a programming blog platform designed to share coding knowledge. It provides tutorials, tips and tricks, and latest updates in the programming world, helping developers stay informed and improve their skills.",
-    image: "/code.ay.png",
-    tags: ["Laravel", "MySQL", "Boostrap"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
-    textColor: "text-white dark:text-black"
-  },
-  {
     title: "ON-VOLUNTEERS",
     description: "ON-VOLUNTEERS is an intuitive web-based application designed to archive and manage volunteer data efficiently. It enables organizations to record, organize, and access volunteer information seamlessly, empowering collaboration and streamlined volunteer engagement.",
     image: "/on-volunteers.png",
@@ -36,6 +26,17 @@ const projectsData = [
     color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
     textColor: "text-white dark:text-black"
   },
+  {
+    title: "CODE.AY",
+    description: "CODE.AY is a programming blog platform designed to share coding knowledge. It provides tutorials, tips and tricks, and latest updates in the programming world, helping developers stay informed and improve their skills.",
+    image: "/code.ay.png",
+    tags: ["Laravel", "MySQL", "Boostrap"],
+    liveUrl: "#",
+    githubUrl: "#",
+    color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
+    textColor: "text-white dark:text-black"
+  },
+
     {
     title: "E-SAKIP",
     description: "Government Agency Performance Accountability System (E-SAKIP) built for the Transportation Department of Banjarbaru City. This application assists in systematic and structured evaluation and reporting of agency performance.",
