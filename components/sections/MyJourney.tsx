@@ -111,7 +111,7 @@ Alhamdulillah, saya berhasil menyelesaikan perjalanan akademik selama 4 tahun de
 
 Terima kasih kepada semua pihak yang telah mendukung perjalanan ini. Semoga ilmu yang didapat bermanfaat dan menjadi bekal untuk masa depan yang lebih baik.
 `,
-    tags: ["Microsoft Word", "Microsoft Excel", "Microsoft Powerpoint"],
+    tags: [],
     images: [
       "/journey/y3.jpeg",
       "/journey/y2.jpeg",
