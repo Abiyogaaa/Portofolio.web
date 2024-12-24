@@ -417,7 +417,7 @@ export default function MyJourney() {
                 )}
                 {item.isPinned && (
                   <span className="px-3 py-1 text-sm font-bold text-white bg-gray-950 rounded-full">
-                    Pinned
+                    ⭐Pinned
                   </span>
                 )}
               </div>
