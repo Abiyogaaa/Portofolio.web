@@ -37,9 +37,12 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white dark:bg-black shadow-md" : ""}`}
-    >
+  className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+    isScrolled
+      ? "bg-white dark:bg-black shadow-[0px_4px_6px_rgba(0,0,0,0.1)] dark:shadow-[0px_4px_6px_rgba(255,255,255,0.1)]"
+      : ""
+  }`}
+>
       <div className="container mx-auto px-1 py-4">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-2xl font-bold ml-8">

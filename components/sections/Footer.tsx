@@ -4,7 +4,7 @@ import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted py-8 bg-gradient-to-br from-gray-50 to-gray-50 dark:from-gray-950 dark:to-gray-950">
+    <footer className="bg-muted py-8 bg-gradient-to-br from-white to-white dark:from-black dark:to-black">
       <div className="container mx-auto px-4">
         <div className=" flex-col md:flex-row justify-center items-center">
           <div className="flex space-x-6 items-center justify-center mb-2">

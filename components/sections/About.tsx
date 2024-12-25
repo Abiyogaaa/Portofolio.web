@@ -11,7 +11,7 @@ const About = () => {
   return (
     <section 
       id="about" 
-      className="py-20 px-5 bg-gradient-to-br from-gray-50 to-gray-50 dark:from-gray-950 dark:to-gray-950 transition-all duration-300"
+      className="py-20 px-5 bg-gradient-to-br from-white to-white dark:from-black dark:to-black transition-all duration-300"
     >
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.h2 
