@@ -32,15 +32,15 @@ interface Project {
 const projectsData: Project[] = [
   
   {
-    title: "Abiy.",
+    title: "Abiyoga.",
     description: {
       en: "A personal portfolio website showcasing various works and projects in software development and web design. Built with modern technologies to provide optimal user experience, featuring responsive design and interactive elements.",
       id: "Portfolio web personal yang menampilkan berbagai karya dan proyek dalam pengembangan perangkat lunak dan desain web. Dibangun dengan teknologi modern untuk memberikan pengalaman pengguna yang optimal."
     },
-    image: "/abiy.png",
+    image: "/abiyoga.png",
     tags: ["React.js", "Vue.js", "Next.js"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://abiyoga.vercel.app/",
+    githubUrl: "https://github.com/Abiyogaaa/Portofolio.web.git",
     color: "from-gray-950 to-gray-950 dark:from-gray-50 dark:to-gray-50",
     textColor: "text-white dark:text-black",
     startDate: "Jan 2024",
