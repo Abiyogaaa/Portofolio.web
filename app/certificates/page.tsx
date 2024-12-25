@@ -521,7 +521,7 @@ export default function CertificatesPage() {
   );
 
   return (
-    <main className="min-h-screen py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900">
+    <main className="min-h-screen py-20 bg-gradient-to-br from-white to-white dark:from-black dark:to-black">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-10">
           <Link href="/#certificate">

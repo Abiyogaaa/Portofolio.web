@@ -281,7 +281,7 @@ export default function ProjectsPage() {
   );
 
   return (
-    <main className="min-h-screen py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900">
+    <main className="min-h-screen py-20 bg-gradient-to-br from-white to-white dark:from-black dark:to-black">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex justify-between items-center mb-10">
         <Link href="/#projects">
@@ -388,7 +388,7 @@ export default function ProjectsPage() {
                         variant="outline" 
                         size="sm" 
                         asChild
-                        className="w-full hover:bg-gradient-to-br hover:from-gray-950 hover:to-gray-950 hover:text-white transition-all"
+                        className="w-full hover:bg-gradient-to-br hover:from-gblackhover:to-gray-950 hover:text-white transition-all"
                       >
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="w-4 h-4 mr-2" />
