@@ -1,4 +1,6 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
+import { BiHash } from "react-icons/bi";
+import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -31,12 +33,28 @@ const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://instagram.com/abiiiyga"
               className="text-muted-foreground hover:text-foreground transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twitter className="w-5 h-5" />
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@calmm.boy?_t=8sTZfZDLjFo&_r=1"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTiktok className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.threads.net/@abiiiyga"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BiHash className="w-5 h-5" />
             </a>
           </div>
           <p className="text-muted-foreground mb-4 md:mb-0 mx-3 text-center">

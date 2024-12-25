@@ -32,7 +32,7 @@ const About = () => {
             className="flex justify-center md:justify-end"
           >
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-75 group-hover:opacity-100 transition duration-300 blur-xl"></div>
+              <div className="absolute -inset-1 bg-gray-950 dark:bg-white rounded-full opacity-75 group-hover:opacity-100 transition duration-300 blur-xl"></div>
               <Image 
                 src="/profil.png" 
                 alt="Professional Profile" 
@@ -56,7 +56,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className={`relative ${!isExpanded ? 'max-h-[300px] overflow-hidden' : ''}`}
             >
-              <motion.p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg font-medium first-letter:text-4xl first-letter:font-bold first-letter:text-purple-600 dark:first-letter:text-pink-500 first-letter:mr-1 first-letter:float-left">
+              <motion.p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg font-medium first-letter:text-4xl first-letter:font-bold first-letter:text-gray-600 dark:first-letter:text-gray-300 first-letter:mr-1 first-letter:float-left">
                 I am Abiyoga Wahyu Pratama, a fresh graduate of Bachelor of Informatics Engineering, with a BNSP certified program analyst and specialization in web programming, as well as application development, web design, and photography. Over the years, I have gained hands-on experience working with various frameworks and technologies, including PHP Native, CodeIgniter 3, Laravel, Bootstrap, Livewire, Alpine.js, Filament, React.js, Vue.js and Next.js.
               </motion.p>
 
@@ -69,101 +69,54 @@ const About = () => {
                   In addition to my technical expertise, I frequently take certifications and courses to enhance my skills. These include the BNSP Program Analyst certification and various other professional development programs that enrich my knowledge and keep me updated with industry standards.
                 </motion.p>
                 <div className="grid grid-cols-6 gap-2 mt-8 mx-0 mb-8 justify-center sm:grid-cols-6">
-   {/* Email */}
-   <a
-      href="mailto:abiyoga@gmail.com"
-      className="relative group transform hover:scale-105 transition-transform duration-300"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Email"
-    >
-      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
-        <Mail className="w-5 h-5 text-white dark:text-gray-950" />
-      </div>
-      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-        Email
-      </span>
-    </a>
-
-    {/* GitHub */}
-    <a
-      href="https://github.com/Abiyogaaa"
-      className="relative group transform hover:scale-105 transition-transform duration-300"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Github"
-    >
-      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
-        <Github className="w-5 h-5 text-white dark:text-gray-950" />
-      </div>
-      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-        GitHub
-      </span>
-    </a>
-
-    {/* LinkedIn */}
-    <a
-      href="https://www.linkedin.com/in/abiyoga-wahyu-pratama-897335295/"
-      className="relative group transform hover:scale-105 transition-transform duration-300"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="LinkedIn"
-    >
-      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
-        <Linkedin className="w-5 h-5 text-white dark:text-gray-950" />
-      </div>
-      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-        LinkedIn
-      </span>
-    </a>
-
-    {/* Instagram */}
-    <a
-      href="https://instagram.com"
-      className="relative group transform hover:scale-105 transition-transform duration-300"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Instagram"
-    >
-      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
-        <Instagram className="w-5 h-5 text-white dark:text-gray-950" />
-      </div>
-      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-        Instagram
-      </span>
-    </a>
-
-    {/* TikTok */}
-    <a
-      href="https://www.tiktok.com/@yourprofile"
-      className="relative group transform hover:scale-105 transition-transform duration-300"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="TikTok"
-    >
-      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
-        <FaTiktok className="w-5 h-5 text-white dark:text-gray-950" />
-      </div>
-      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-        TikTok
-      </span>
-    </a>
-
-    {/* Threads */}
-    <a
-      href="https://www.threads.net/@yourprofile"
-      className="relative group transform hover:scale-105 transition-transform duration-300"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Threads"
-    >
-      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-950 dark:bg-white shadow-md group-hover:shadow-lg group-hover:bg-gray-800 dark:group-hover:bg-gray-200 transition-all">
-        <BiHash className="w-5 h-5 text-white dark:text-gray-950" />
-      </div>
-      <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 text-xs font-medium text-gray-700 dark:text-gray-300 transition-opacity">
-        Threads
-      </span>
-    </a>
+                <a
+              href="mailto:abiyoga@gmail.com"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Mail className="w-10 h-7" />
+            </a>
+            <a
+              href="https://github.com/Abiyogaaa"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-10 h-7" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abiyoga-wahyu-pratama-897335295/"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="w-10 h-7" />
+            </a>
+            <a
+              href="https://instagram.com/abiiiyga"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="w-10 h-7" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@calmm.boy?_t=8sTZfZDLjFo&_r=1"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTiktok className="w-10 h-7" />
+            </a>
+            <a
+              href="https://www.threads.net/@abiiiyga"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BiHash  className="w-10 h-7" />
+            </a>
 </div>
 
 
@@ -178,7 +131,7 @@ const About = () => {
 
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="mt-4 text-purple-600 dark:text-pink-500 font-medium hover:underline focus:outline-none transition-colors duration-300"
+              className="mt-4 text-gray-950 dark:text-white font-medium hover:underline focus:outline-none transition-colors duration-300"
             >
               {isExpanded ? 'Baca lebih sedikit' : 'Baca selengkapnya'}
             </button>
