@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 const ITEMS_PER_PAGE = 4;
 
@@ -363,67 +363,76 @@ I’m thrilled to apply these new skills and continue growing as a Digital Marke
     isNew: false
   },
 
-].map(item => ({ ...item, isPinned: item.isPinned || false }));;
-
-export default function MyJourney() {
+].map(item => ({ ...item, isPinned: item.isPinned || false }));
+const MyJourney = () => {
+  // State untuk mengatur indeks gambar saat ini untuk setiap journey
   const [currentIndexes, setCurrentIndexes] = useState(journeyData.map(() => 0));
+  
+  // State untuk mengatur deskripsi yang diperluas
   const [expandedDescriptions, setExpandedDescriptions] = useState(journeyData.map(() => false));
+  
+  // State untuk mengatur jumlah item yang terlihat
   const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
+  
+  // State untuk tag yang dipilih
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-  // Enhanced sorting logic to handle both pinned and new items
-  const sortedJourneyData = [...journeyData].sort((a, b) => {
-    // First, sort by pinned status
-    if (a.isPinned !== b.isPinned) {
-      return a.isPinned ? -1 : 1;
-    }
-    // If neither is pinned or both are pinned, sort by new status
-    if (!a.isPinned && a.isNew !== b.isNew) {
-      return a.isNew ? -1 : 1;
-    }
-    // If all other conditions are equal, maintain original order
-    return 0;
-  });
+  // Hitung jumlah tag menggunakan useMemo untuk optimasi performa
+  const tagCounts = useMemo(() => {
+    const counts: { [key: string]: number } = {};
+    journeyData.forEach(item => {
+      item.tags.forEach(tag => {
+        counts[tag] = (counts[tag] || 0) + 1;
+      });
+    });
+    return counts;
+  }, []);
 
-  const showLoadMore = journeyData.length > ITEMS_PER_PAGE;
-  const hasMoreItems = visibleItems < journeyData.length;
+  // Urutkan tag berdasarkan jumlah
+  const sortedTags = useMemo(() => {
+    return Object.entries(tagCounts)
+      .sort(([, a], [, b]) => b - a)
+      .map(([tag]) => tag);
+  }, [tagCounts]);
 
+  // Filter data journey berdasarkan tag yang dipilih
+  const filteredJourneyData = useMemo(() => {
+    if (!selectedTag) return [...journeyData];
+    return journeyData.filter(item => item.tags.includes(selectedTag));
+  }, [selectedTag]);
+
+  // Urutkan data journey (pinned first, then new)
+  const sortedJourneyData = useMemo(() => {
+    return [...filteredJourneyData].sort((a, b) => {
+      if (a.isPinned !== b.isPinned) return a.isPinned ? -1 : 1;
+      if (!a.isPinned && a.isNew !== b.isNew) return a.isNew ? -1 : 1;
+      return 0;
+    });
+  }, [filteredJourneyData]);
+
+  // Handler untuk navigasi gambar sebelumnya
   const handlePrev = (journeyIndex: number) => {
-    setCurrentIndexes((prevIndexes) =>
-      prevIndexes.map((index, i) =>
-        i === journeyIndex
-          ? index === 0
-            ? sortedJourneyData[i].images.length - 1
-            : index - 1
-          : index
-      )
-    );
+    setCurrentIndexes(prev => prev.map((index, i) => 
+      i === journeyIndex ? (index === 0 ? sortedJourneyData[i].images.length - 1 : index - 1) : index
+    ));
   };
 
+  // Handler untuk navigasi gambar selanjutnya
   const handleNext = (journeyIndex: number) => {
-    setCurrentIndexes((prevIndexes) =>
-      prevIndexes.map((index, i) =>
-        i === journeyIndex
-          ? index === sortedJourneyData[i].images.length - 1
-            ? 0
-            : index + 1
-          : index
-      )
-    );
+    setCurrentIndexes(prev => prev.map((index, i) => 
+      i === journeyIndex ? (index === sortedJourneyData[i].images.length - 1 ? 0 : index + 1) : index
+    ));
   };
 
+  // Handler untuk toggle deskripsi
   const toggleDescription = (index: number) => {
-    setExpandedDescriptions((prev) =>
-      prev.map((value, i) => (i === index ? !value : value))
-    );
+    setExpandedDescriptions(prev => prev.map((value, i) => i === index ? !value : value));
   };
 
-  const handleLoadMore = () => {
-    setVisibleItems(prev => prev + ITEMS_PER_PAGE);
-  };
-
-  const truncateText = (text: string, maxLength: number) => {
-    if (text.length <= maxLength) return text;
-    return text.slice(0, maxLength) + "...";
+  // Handler untuk memilih tag
+  const handleTagClick = (tag: string) => {
+    setSelectedTag(currentTag => currentTag === tag ? null : tag);
+    setVisibleItems(ITEMS_PER_PAGE);
   };
 
   return (
@@ -432,91 +441,135 @@ export default function MyJourney() {
         <h2 className="text-3xl font-bold text-center text-gray-950 dark:text-white mb-8">
           My Journey
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-0 sm:px-9 md:px-9">
-          {sortedJourneyData.slice(0, visibleItems).map((item, journeyIndex) => (
-            <div
-              key={item.id}
-              className={`relative bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:bg-gray-100 dark:hover:bg-gray-800 hover:scale-[1.02] ${
-                item.isPinned ? 'border-2 border-gray-600' : ''
-              }`}
-            >
-              <div className="absolute top-4 right-4 z-10 flex gap-2">
-                {item.isNew && (
-                  <span className="px-3 py-1 text-sm font-bold text-white bg-yellow-600 rounded-full animate-pulse">
-                    New Post
-                  </span>
-                )}
-                {item.isPinned && (
-                  <span className="px-3 py-1 text-sm font-bold text-white bg-gray-950 rounded-full">
-                    ⭐Pinned
-                  </span>
-                )}
-              </div>
-              <div className="relative">
-                <img
-                  src={item.images[currentIndexes[journeyIndex]]}
-                  alt={item.title}
-                  className="w-full h-64 object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
-                />
-                <button
-                  onClick={() => handlePrev(journeyIndex)}
-                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:shadow-xl"
-                >
-                  ‹
-                </button>
-                <button
-                  onClick={() => handleNext(journeyIndex)}
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:shadow-xl"
-                >
-                  ›
-                </button>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">
-                  {item.date}
-                </p>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  {item.title}
-                </h3>
-                <div className="flex flex-wrap gap-2 mt-2 mb-3">
-                  {item.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-0 py-1 pt-0 text-sm font-medium text-blue-700 dark:text-blue-700"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="text-gray-700 dark:text-gray-400 mt-2">
-                  {expandedDescriptions[journeyIndex] 
-                    ? item.description 
-                    : truncateText(item.description, 150)}
-                  {item.description.length > 150 && (
-                    <button
-                      onClick={() => toggleDescription(journeyIndex)}
-                      className="ml-2 text-gray-950 underline dark:text-blue-50 hover:underline focus:outline-none"
-                    >
-                      {expandedDescriptions[journeyIndex] ? "Baca lebih sedikit" : "Baca selengkapnya"}
-                    </button>
-                  )}
-                </div>
+        
+        <div className="flex flex-col md:flex-row gap-8 px-4 md:px-9">
+          {/* Bagian Tag dengan Scrolling */}
+          <div className="md:w-1/4">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 sticky top-24">
+              <h2 className="text-xl font-bold text-gray-950 dark:text-white mb-4">ALL POSTS</h2>
+              {/* Container scrollable untuk tag */}
+              <div className="h-[60vh] overflow-y-auto pr-2 space-y-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+                {sortedTags.map(tag => (
+                  <button
+                    key={tag}
+                    onClick={() => handleTagClick(tag)}
+                    className={`w-full text-left block py-1 ${
+                      selectedTag === tag 
+                        ? 'text-gray-950 dark:text-gray-50 underline dark:underline dark:font-semibold font-semibold'
+                        : 'text-gray-950 dark:text-gray-50'
+                    } hover:text-gray-800 dark:hover:text-gray-100 transition-colors`}
+                  >
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm">{tag}</span>
+                      <span className="text-sm">({tagCounts[tag]})</span>
+                    </div>
+                  </button>
+                ))}
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Grid Posts yang Compact */}
+          <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {sortedJourneyData.slice(0, visibleItems).map((item, journeyIndex) => (
+              <div 
+                key={item.id} 
+                className={`bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all ${
+                  item.isPinned ? 'border-2 border-gray-600' : ''
+                }`}
+              >
+                {/* Bagian Gambar */}
+                <div className="relative h-48">
+                  <img
+                    src={item.images[currentIndexes[journeyIndex]]}
+                    alt={item.title}
+                    className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                  {/* Badge untuk New dan Pinned */}
+                  <div className="absolute top-2 right-2 flex gap-2">
+                    {item.isNew && (
+                      <span className="px-2 py-1 text-xs font-bold text-white bg-yellow-600 rounded-full">
+                        New Post
+                      </span>
+                    )}
+                    {item.isPinned && (
+                      <span className="px-2 py-1 text-xs font-bold text-white bg-gray-950 rounded-full">
+                        ⭐Pinned
+                      </span>
+                    )}
+                  </div>
+                  {/* Tombol navigasi gambar */}
+                  <button 
+                    onClick={() => handlePrev(journeyIndex)} 
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-1 rounded-full hover:bg-white"
+                  >
+                    ‹
+                  </button>
+                  <button 
+                    onClick={() => handleNext(journeyIndex)} 
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-1 rounded-full hover:bg-white"
+                  >
+                    ›
+                  </button>
+                </div>
+                
+                {/* Bagian Konten */}
+                <div className="p-4">
+                  <p className="text-xs text-gray-500 mb-1">{item.date}</p>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {item.tags.slice(0, 3).map((tag, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleTagClick(tag)}
+                        className={`text-xs ${
+                          selectedTag === tag 
+                            ? 'text-gray-950 font-semibold dark:text-gray-50 underline'
+                            : 'text-gray-950 font-semibold dark:text-gray-50 dark:font-semibold'
+                        } hover:underline`}
+                      >
+                        {tag}
+                      </button>
+                    ))}
+                    {item.tags.length > 3 && (
+                      <span className="text-xs text-gray-500">
+                        +{item.tags.length - 3} more
+                      </span>
+                    )}
+                  </div>
+                  {/* Deskripsi dengan toggle */}
+                  <div className="text-sm text-gray-700 dark:text-gray-400">
+                    {expandedDescriptions[journeyIndex] 
+                      ? item.description 
+                      : `${item.description.slice(0, 100)}...`}
+                    <button
+                      onClick={() => toggleDescription(journeyIndex)}
+                      className="ml-1 text-gray-950 dark:text-blue-50 underline hover:underline text-sm"
+                    >
+                      {expandedDescriptions[journeyIndex] ? "Baca Lebih Sedikit" : "Baca Selengkapnya"}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {showLoadMore && hasMoreItems && (
+        {/* Tombol Load More */}
+        {visibleItems < sortedJourneyData.length && (
           <div className="flex justify-center mt-8">
             <button
-              onClick={handleLoadMore}
-              className="px-6 py-2 bg-gray-950 dark:bg-white dark:text-black text-white rounded-lg hover:bg-gray-800 hover:dark:bg-gray-300 transition-colors duration-300"
+              onClick={() => setVisibleItems(prev => prev + ITEMS_PER_PAGE)}
+              className="px-4 py-2 bg-gray-950 dark:bg-white dark:text-black text-white rounded-lg hover:bg-gray-800 transition-colors"
             >
-              Tampilkan Lebih Banyak
+              Load More
             </button>
           </div>
         )}
       </div>
     </section>
   );
-}
+};
+
+export default MyJourney;

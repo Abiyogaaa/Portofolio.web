@@ -34,7 +34,17 @@ const certificateData = [
     description: "Sertifikasi kompetensi nasional untuk Program Analyst yang mencakup kemampuan analisis, perancangan dan pengembangan sistem",
     validUntil: "2027",
     verificationUrl: "https://bnsp.go.id",
-    skills: ["System Analysis", "Program Design", "Software Development"],
+    skills: [
+      "Software Scalability Analysis",
+      "SQL Data Management",
+      "Database Access Implementation",
+      "Programming Algorithm Implementation",
+      "Code Documentation",
+      "Program Debugging and Profiling",
+      "Code Review",
+      "Integration Testing"
+  ]
+  ,
     color: "text-white dark:text-black"
   },
   {
