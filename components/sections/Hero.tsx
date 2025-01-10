@@ -32,10 +32,10 @@ const Hero = () => {
   // Download CV handler
   const handleDownloadCV = () => {
     // You would replace this with the actual path to your CV
-    const cvPath = '/path/to/your/cv.pdf';
+    const cvPath = '/cv/CV_ABIYOGA WAHYU PRATAMA_TEKNIK INFORMATIKA.pdf';
     const link = document.createElement('a');
     link.href = cvPath;
-    link.download = 'Abiyoga_Wahyu_Pratama_CV.pdf';
+    link.download = 'CV_ABIYOGA WAHYU PRATAMA_TEKNIK INFORMATIKA.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
