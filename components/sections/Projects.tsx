@@ -50,7 +50,7 @@ const projectsData = [
   {
     title: "Rentcar-Antariks",
     description: "A full-featured Rentcar platform built with PHP Native and Bootstrap. This platform provides a comprehensive car rental management system with a user-friendly interface to facilitate the booking and management process.",
-    image: "/Rentcar.png",
+    image: "/image.png",
     tags: ["PHP Native", "MySQL", "Bootstrap"],
     liveUrl: "#",
     githubUrl: "#",
