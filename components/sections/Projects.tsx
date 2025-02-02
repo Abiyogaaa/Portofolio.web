@@ -9,7 +9,7 @@ const projectsData = [
   {
     title: "Abiyoga.",
     description: "A personal portfolio website showcasing various works and projects in software development and web design. Built with modern technologies to provide optimal user experience, featuring responsive design and interactive elements.",
-    image: "/abiyoga.png",
+    image: "/portfolio.png",
     tags: ["React.js", "Vue.js", "Next.js"],
     liveUrl: "https://abiyoga.vercel.app/",
     githubUrl: "https://github.com/Abiyogaaa/Portofolio.web.git",
